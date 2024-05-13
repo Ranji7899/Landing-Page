@@ -1,0 +1,227 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.head-font{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+/* .videoContainer{
+    background-image:url('image/home-boat.svg');
+} */
+.imageContainer, .imgContainer{
+    position:relative;
+}
+.imageContainer:hover .imageDiv{
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    background:#33ccff; 
+    transition: background-color 1s ease;
+}
+.imageDiv, .imgDiv{
+    width:100%; 
+    height:100%; 
+    background-color:rgba(0,0,0,0.5); 
+    position:absolute; 
+    top:0; 
+    left:0px; 
+    display:flex;
+    justify-content:start;
+    align-items:end;
+}
+.imgContainer:hover .imgDiv{
+    background-color:rgba(0,0,0,0.7); 
+
+}
+.destination_head:hover{
+    cursor:pointer;
+}
+.destination_head.active{
+    border-bottom:3px solid #33ccff; 
+}
+#holiday div:hover a{
+    color:#33ccff !important;
+    transition: color 1s ease;
+    cursor: pointer;
+}
+#mice:hover a,#wedding:hover a{
+    cursor:pointer;
+    color:#000 !important;
+}
+#mice:hover,#wedding:hover {
+    background-color: #33ccff !important;
+    transition: background-color 1s 
+}
+
+/* --------  Animations ------- */
+.slideLeft, .slideLeftDelay, .slideLeftDelaytest {
+    position:relative;
+    transform: translatex(-150px);
+    opacity:0;
+    transition: all 1s ease;
+}
+.reveal.active .slideLeft, .reveal.active .slideLeftDelay, .reveal.active .slideLeftDelaytest{
+    transform: translatex(0px);
+    opacity:1;
+}
+.slideLeftDelay:nth-child(1){
+    transform: translatex(-200px);
+    transition: all 1s ;
+    opacity:0;
+}
+.slideLeftDelay:nth-child(2){
+    transform: translatex(-150px);
+    transition: all 1s 0.2s;
+    opacity:0;
+}
+.slideLeftDelay:nth-child(3){
+    transform: translatex(-100px);
+    transition: all 1s  0.4s;
+    opacity:0;
+}
+.slideLeftDelaytest:nth-child(1){
+    transform: translatex(-100px);
+    transition: all 1s ;
+    opacity:0;
+}
+.slideLeftDelaytest:nth-child(2){
+    transform: translatex(-90px);
+    transition: all 1s 0.6;
+    opacity:0;
+}
+.slideLeftDelaytest:nth-child(3){
+    transform: translatex(-80px);
+    transition: all 1s 0.5s;
+    opacity:0;
+}
+.slideLeftDelaytest:nth-child(4){
+    transform: translatex(-70px);
+    transition: all 1s ;
+    opacity:0;
+}
+.slideRight, .slideRightDelay, .slideRightCollabrate {
+    position:relative;
+    transform: translatex(150px);
+    opacity:0;
+    transition: all 1s ease;
+}
+.reveal.active .slideRight, .reveal.active .slideRightDelay{
+    transform: translatex(0px);
+    opacity:1;
+}
+.reveal.active .slideRightCollabrate{
+    transform: translatex(0px);
+    opacity:1;
+    animation: btnAnim 1s linear 1s ease;
+}
+@keyframes btnAnim {
+    0%{
+        transform: translatex(0px);
+    }
+    50%{
+        transform: translatex(-30px);
+    }
+    100%{
+        transform: translatex(0px);
+    }
+}
+.slideUp, .slideUpDelay {
+    position:relative;
+    transform: translateY(150px);
+    opacity:0;
+    transition: all 1s ease 0.5s;
+}
+.reveal.active .slideUp,.reveal.active .slideUpDelay{
+    transform: translatex(0px);
+    opacity:1;
+}
+.slideDown {
+    position:relative;
+    transform: translateY(-150px);
+    opacity:0;
+    transition: all 1s ease;
+}
+.reveal.active .slideDown{
+    transform: translatex(0px);
+    opacity:1;
+}
+.slideUpDelay:nth-child(1){
+    transition: all 1s ease 0.5s;
+}
+.slideUpDelay:nth-child(2){
+    transition: all 1s ease 0.6s;
+}
+.slideUpDelay:nth-child(3){
+    transition: all 1s ease 0.7s;
+}
+.zoomIn{
+    position:relative;
+    transform:scale(0.1);
+    opacity:0;
+    width:100%;
+    margin-top:-100px;
+    transition: all 0.1s ease;
+
+}
+.reveal.active .zoomIn{
+    transform:scale(1);
+    opacity:1;
+}
+.greenCircle{
+    transform:rotateZ(180deg);
+    transition: all 0.5s ease;
+}
+.greenCirclerotate{
+    transform:rotateZ(0deg);
+    transition: all 0.5s ease;
+}
+.reveal.active .greenCircle{
+    transform:rotateZ(0deg) !important;
+}
+.reveal.active .greenCirclerotate{
+    transform:rotateZ(180deg) !important;
+}
+.orangeCircle{
+    transform:rotateZ(180deg);
+    transition: all 0.5s linear ease forwards;
+}
+.reveal.active .orangeCircle{
+    transform:rotateZ(0deg) !important;
+}
+
+.owl-nav .owl-prev {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+  }
+  .owl-nav .owl-next {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+  }
+  .owl-dots {
+    text-align: center;
+    margin-top:-50px;
+  }
+  .owl-dots .owl-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background: #ccc !important;
+    margin-left: 3px;
+    margin-right: 3px;
+    outline: none;
+  }
+  .owl-dots .owl-dot.active {
+    background: #000 !important;
+  }
